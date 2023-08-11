@@ -129,6 +129,7 @@
     position: absolute;
     bottom: -160px;
     width: 100%;
+    z-index: -1;
 }
 
 .update-container .update-box {  
