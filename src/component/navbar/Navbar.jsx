@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../image/logo.png'
 
 
 const Navbar = () => {
+
+const [bar,setBar] = useState("burger-bar unclicked");
+const [menu_Class, setMenuClass] = useState("menu1 hidden");
+const [ismobile, setIsMobile] = useState(false);
  
 const handlemobile = () =>{
-    console.log("clicked")
+    if(!ismobile){
+        setBar("burger-bar clicked")
+        setMenuClass("menu1 hidden")
+    }else{
+        setBar("burger-bar unclicked")
+        setMenuClass("menu1 visible")
+    }
+    setIsMobile(!ismobile)
 }
     return (
         <>
@@ -21,8 +32,7 @@ const handlemobile = () =>{
                     </div>
                 </div>
                 <div className="menu-bottom">
-
-                    <ul className='menu'>
+                    <ul className={ismobile?"visible":"hidden"}>
                         <li>
                             <a href="/">आचार्य-जी</a>
                             <ul>
@@ -47,11 +57,12 @@ const handlemobile = () =>{
                             <a href="/">चातुर्मास</a>
                         </li>
                     </ul>
-                    <div className="hamburger" onClick={handlemobile}>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
+                    <div className="burger-menu" onClick={handlemobile} >
+                        <div className={bar}></div>
+                        <div className={bar}></div>
+                        <div className={bar}></div>
                     </div>
+                <div className={menu_Class}></div>
                 </div>
             </nav>
 
