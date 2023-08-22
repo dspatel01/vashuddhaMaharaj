@@ -24,18 +24,18 @@ nav .menu-top .logo img {
     width: 70px;
 }
 
-nav .menu-top .search-bar {
+nav .menu-bottom .search-bar {
     position: relative;
     display: flex;
-    width: 190px;
+    width: 250px;
     height: 30px;
 
 }
 
-nav .menu-top .search-bar input {
+nav .menu-bottom .search-bar input {
     position: relative;
-    width: 190px;
-    height: 30px;
+    width: 250px;
+    height: 35px;
     border-radius: 25px;
     outline: none;
     border: none;
@@ -43,15 +43,17 @@ nav .menu-top .search-bar input {
     font-size: 0.9rem;
 }
 
-nav .menu-top .search-bar i {
+nav .menu-bottom .search-bar i {
     cursor: pointer;
     position: absolute;
-    top: 7px;
-    right: 10px;
-    color: gray;
+    top: 10px;
+    right: 12px;
+    color: rgb(227, 167, 14);
 }
 
 .menu-bottom {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,33 +61,32 @@ nav .menu-top .search-bar i {
     background-image: linear-gradient(90deg, rgb(255, 0, 0), rgb(227, 167, 14));
 }
 
-.menu1,
-.menu1 ul {
+
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 
 }
 
-.menu1 {
+ul {
     top: 10px;
     width: 100%;
     margin: 5px auto;
 
 }
 
-.menu1::before,
-.menu1::after {
+ul::before,
+ul::after {
     content: '';
     display: block;
 }
 
-.menu1::after {
-
+ul::after {
     clear: both;
 }
 
-.menu1 li {
+ul li {
     cursor: pointer;
     list-style: none;
     float: left;
@@ -93,7 +94,7 @@ nav .menu-top .search-bar i {
 
 }
 
-.menu1 a {
+ul a {
     float: left;
     padding: 12px 30px;
     font-family: Baloo;
@@ -101,44 +102,47 @@ nav .menu-top .search-bar i {
     color: #fff;
 }
 
-.menu1 li:hover>a {
+ul li:hover>a {
     color: #fafafa;
     background-color: #f7a80ae2;
 }
 
-.menu1 ul {
+ul ul {
+
     margin: 20px 0 0 0;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 46px;
+    top: 52px;
     left: 0;
     z-index: 1;
-    background: #313030;
+    background-color: white;
     border-radius: 3px;
     transition: all .3s ease-in;
 
 }
 
 
-.menu1 li>ul {
+ul li>ul {
     margin-top: 10px;
     display: flex;
+    width: 500px;
 }
 
-.menu1 li>ul li {
+ul li>ul li {
     padding: 3px 10px;
     cursor: pointer;
 }
 
-.menu1 li>ul li a {
+ul li>ul li a {
     text-align: center;
     display: block;
-    width: 120px;
+
     padding: 10px 10px;
+    color: orange;
 }
 
-.menu1 li:hover>ul {
+ul li:hover>ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
@@ -156,76 +160,18 @@ nav .menu-top .search-bar i {
         background-image: linear-gradient(90deg, rgb(255, 0, 0), rgb(227, 167, 14));
     }
 
-    nav .menu-top .search-bar {
+    nav .menu-bottom .search-bar {
         display: none;
     }
+
+
+
 
     .menu-bottom {
         height: 70px;
         background: transparent;
     }
 
-    /* nav .menu-bottom .menu1 {
-        background-image: linear-gradient(360deg, rgb(251, 5, 5), rgb(235, 195, 18));
-        width: 70%;
-        height: 100vh;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        z-index: 1000;
-        padding-top: 20px;
-    }
-
-    nav .menu-bottom .menu1 li {
-        width: 170px;
-        margin: 2px 0;
-        box-shadow: 0 2px 15px 3px rgba(15, 15, 15, 0.254);
-    }
-
-    nav .menu-bottom .menu1 li:hover {
-        position: relative;
-        width: 170px;
-        background-color: rgb(247, 110, 12);
-        margin: 2px 0;
-       
-    }
-
-    .menu1 li>ul li {
-
-        height: fit-content;
-        width: 190px;
-        display: block;
-        padding-top: -30px;
-        margin-top: 2px;
-        background-color: rgb(247, 110, 12);
-    }
-
-    .menu1 li ul {
-        width: 170px;
-        margin-top: 50px;
-        position: absolute;
-        background-color: rgb(245, 144, 12);
-        margin-top: 20px;
-        top: 48px;
-        left: 171px;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu1 li ul li {
-        padding-left: 30px;
-    }
-
-    .menu1 li:hover>a {
-        color: #fafafa;
-        background-color: transparent;
-    } */
 
     .burger-menu {
         margin-top: 3px;
@@ -245,66 +191,114 @@ nav .menu-top .search-bar i {
         border-radius: 15px;
     }
 
-    .hidden{
+
+    .hidden {
         display: none;
-        background-color: transparent;
     }
-    .visible{
+
+    .visible {
         transition: 0.5s ease-in-out;
-        width: 70%;
+        width: 90%;
         height: 100vh;
         position: absolute;
-        top:70px;
-        left:0;
+        top: 70px;     
         display: flex;
         flex-direction: column;
-        background-color: red;
         color: white;
         padding: 20px;
+    }
+
+    .menu-bottom ul {
+        width: 400px;
+        position: absolute;
+        top: 65px;
+        right: 80px;
+        background-image: radial-gradient(orange,red);
         
     }
-    ul li{
-        list-style: none;
-        padding: 10px;
+    .menu-bottom ul li{
+        margin-top: 10px;
+        padding-top: 10px 0;
     }
-    ul li a{
-        color:white;
+    .menu-bottom ul li ul{
+        width: 200px;
+        position: absolute;
+        top: 0px;
+        right: 400px;
+        background-image: none;
+       
+    }
+    .menu-bottom ul li ul li{
+        width: 200px;
+        color: orange;
+        
+     }
+    .menu-bottom ul li ul li a{
+       color: orange;
+       
+    }
+    .menu-bottom ul li ul li a:hover{
+        color: white;
+        
+     }
+    ul li:hover>a {
+        width: 150px;
+        color: #fafafa;
+        background-color: #f7a80ae2;
+    }
+
+    ul li a {
+        color: white;
         text-decoration: none;
         font-size: 1.2rem;
     }
-    /* .menu-bottom ul li ul 
-    {
-        display: none;
-    }
-    .menu-bottom ul li:hover .menu-bottom ul li ul 
-    {
-        
-    } */
-    ul li ul{
+
+   .menu-bottom ul li ul {
+        position: absolute;
+        top: 52px;
+        left: 150px;
+        width: 200px;
         padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+
     }
-    .menu1{
+
+    ul {
         display: none;
+
     }
-    .visible ul li{
+
+    .visible ul li {
+       
         list-style: none;
+
     }
-    .burger-bar.clicked:nth-child(1){
-        transform: rotate(45deg) translate(0.7em,0em);
+
+    .visible ul {
+        list-style: none;
+
+    }
+
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(45deg) translate(0.7em, 0em);
         transition: ease-in-out 0.5s;
     }
-    .burger-bar.clicked:nth-child(2){
+
+    .burger-bar.clicked:nth-child(2) {
         transform: scale(0);
         transition: ease-in-out 0.5s;
-        
+
     }
-    .burger-bar.clicked:nth-child(3){
-        transform: rotate(135deg) translate(-1em,0.3em);
+
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(135deg) translate(-1em, 0.3em);
         transition: ease-in-out 0.5s;
     }
-    .burger-bar.unclicked{
+
+    .burger-bar.unclicked {
         transform: rotate(0) translate(0);
         transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-    } 
-    
+    }
+
 }

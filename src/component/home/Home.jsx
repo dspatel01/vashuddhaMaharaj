@@ -30,6 +30,11 @@ const Home = () => {
         </div>
       </div>
 
+      {/* <div className="contact-details">
+          <h3>
+            Contact
+          </h3>
+      </div> */}
     </>
   )
 }

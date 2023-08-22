@@ -26,10 +26,7 @@ const handlemobile = () =>{
                     <div className="logo">
                         <img src={logo} alt="" />
                     </div>
-                    <div className="search-bar">
-                        <input type="text" placeholder='Search' />
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                   
                 </div>
                 <div className="menu-bottom">
                     <ul className={ismobile?"visible":"hidden"}>
@@ -57,6 +54,10 @@ const handlemobile = () =>{
                             <a href="/">चातुर्मास</a>
                         </li>
                     </ul>
+                    <div className="search-bar">
+                        <input type="text" placeholder='Search' />
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </div>
                     <div className="burger-menu" onClick={handlemobile} >
                         <div className={bar}></div>
                         <div className={bar}></div>
